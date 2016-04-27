@@ -52,7 +52,10 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin()	
+		new webpack.NoErrorsPlugin(),
+		new webpack.ProvidePlugin({
+			jQuery: "jquery"
+		})	
 	],
 	devServer: {
 		hot: true,
