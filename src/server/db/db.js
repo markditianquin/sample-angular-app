@@ -1,9 +1,13 @@
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/todos');
+var uri = process.env.MONGOLAB_URI || 'mongodb://localhost/todos';
 
-console.log('Connecting to DB : ', mongoose);
+//mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/todos');
 
-var Todo = mongoose.model('Todo', {
+console.log('Connecting to DB : ', uri);
+
+var conn = mongoose.createConnection(uri);
+
+var Todo = conn.model('Todo', {
 	task: String,
 	isCompleted: Boolean,
 	isEditing: Boolean
