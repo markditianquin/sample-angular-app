@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var uri = process.env.MONGOLAB_URI || 'mongodb://localhost/todos';
+var uri = 'mongodb://heroku_fn1hr8zp:7bja6taidcv8hbqhcrfdq1qnac@ds021731.mlab.com:21731/heroku_fn1hr8zp' || 'mongodb://localhost/todos';
 
 //mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/todos');
 
